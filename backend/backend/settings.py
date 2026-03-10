@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-7*6#+68hv-kp36=zavlozz&x%5a_6pk3ej&c#)q=-_jzx+#03c'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -60,7 +60,7 @@ MIDDLEWARE = [
 # 允许前端域名跨域（开发阶段可设为*，生产环境指定具体域名）
 CORS_ALLOW_ALL_ORIGINS = True  # 开发用，生产改为：CORS_ALLOWED_ORIGINS = ["http://localhost:8080"]
 CORS_ALLOWED_ORIGINS = [
-    "http://192.168.190.1:8080",#修改为本机IP后可供局域网内设备访问
+    "http://x.x.x.x:8080",#修改为本机IP后可供局域网内设备访问
     "http://localhost:8080"
 ]
 #CORS_ALLOW_CREDENTIALS = True  # 允许携带Cookie
@@ -123,7 +123,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'movie_and_tv',
         "USER": "root",
-        "PASSWORD": "root",
+        "PASSWORD": "123",
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -180,12 +180,12 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'  # 163邮箱的SMTP服务器地址（固定）
 EMAIL_PORT = 25  # 163邮箱非SSL端口（或465用于SSL加密，二选一）
 EMAIL_USE_TLS = False  # 25端口无需TLS加密（若用465则设为True）
-EMAIL_HOST_USER = 'ye15220695171@163.com'  # 发送邮件的163邮箱（完整地址）
-EMAIL_HOST_PASSWORD = 'BBqEJ37PvsZqB6gi'  # 163邮箱的SMTP授权码（25.11.26.180）
-DEFAULT_FROM_EMAIL = "影视平台<ye15220695171@163.com>" # 默认发件人（需与EMAIL_HOST_USER一致）
+EMAIL_HOST_USER = ''  # 发送邮件的163邮箱（完整地址）
+EMAIL_HOST_PASSWORD = ''  # 163邮箱的SMTP授权码（25.11.26.180）
+DEFAULT_FROM_EMAIL = "" # 默认发件人（需与EMAIL_HOST_USER一致）
 
 # 前端域名（根据实际情况修改）
 FRONTEND_URL = "http://localhost:8080"  # Vue/React前端地址
 
-SITE_DOMAIN = "http://192.168.190.1:8080"
+SITE_DOMAIN = "http://x.x.x.x:8080"
 

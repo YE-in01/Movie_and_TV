@@ -3,7 +3,7 @@ import { ElMessage } from 'element-plus'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: process.env.VUE_APP_API_BASE_URL || 'http://192.168.190.1:8000', // 基础URL，可通过环境变量配置
+  baseURL: process.env.VUE_APP_API_BASE_URL || 'http://x.x.x.x:8000', // 基础URL，可通过环境变量配置
   timeout: 30000, // 请求超时时间
   headers: {
     'Content-Type': 'application/json;charset=utf-8'
